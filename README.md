@@ -55,6 +55,8 @@ Use the script at your own risk!!!</b>
   <li>I do not recommend placing the three files in the <b>/</b> (root) directory but in an area that is protected, for example, by a .htaccess file and protected by a login or only from certain IP addresses can be reached from.</li>
 </ul><br>
 
+If everything is done until yet, just open the searchform.html directly with the URL in your browser e.g. https://example.com/directory/searchform.html
+
 #############################<br>
 GERMAN<br>
 #############################<br><br>
@@ -70,3 +72,5 @@ Nutzung des Scripts auf eigene Gefahr!!!</b>
   <li><b>replace.php</b>: In der replace.php muss auch vor Benutzung die Verbindungsdaten der verwendeten Datenbank eingegeben werden um die Dateien auslesen und ersetzen zu können. Außerdem werden die einzelnen Schritte samt den alten Auszug der Daten, dem Replace Query und den Auszug der neuen Daten ausgegeben . Falls ein Auszug ohne Inhalt ist ausgegeben wird, dann sind keine Datensätze vorhanden.</li><br>
   <li>Ich empfehle die drei Dateien nicht in das <b>/</b> (root-) Verzeichnis zu legen sondern in einen Bereich der bspw. durch eine .htaccess Datei geschützt ist und durch einen Login oder nur von gewissen IP-Adressen aus erreichbar ist.</li>
 </ul><br>
+
+Falls das alles soweit getan ist, einfach die searchform.html aufrufen und starten bspw. https://example.com/unterordner/searchform.html
