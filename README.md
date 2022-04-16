@@ -42,7 +42,7 @@ unter Ubuntu kann man einfach nach der Standardanwendung <b>Startup Application<
 Das ist so ziemlich alles.
 
 # uid
-Since our association has now introduced new membership numbers, our board wanted these to be entered in the seat booking software for each individual. For this purpose, the so-called <b>UID</b> (User ID) should serve as a membership number. However, since the user IDs cannot be edited easily, this must be adjusted manually in the database. Since the phpmyadmin interface couldn't really help me, I created a quick workaround here.
+Since our association has now introduced new membership numbers, our board wanted these to be entered in the seat booking software for each individual. For this purpose, the so-called <b>UID</b> (User ID) should serve as a membership number. However, since the user IDs cannot be edited easily, this must be adjusted manually in the database. However, key adjustments are always a bit critical and you have to keep a series fooge here. Since the phpmyadmin interface couldn't really help me, I created a quick workaround here.
 
 <b>Currently only the tables <b>bs_bookings, bs_users, bs_users_meta</b> are considered here, nothing else!!!<br>
 I ALWAYS recommend creating a backup of the database before manually screwing on the database!!!<br>
@@ -59,7 +59,7 @@ Use the script at your own risk!!!</b>
 GERMAN<br>
 #############################<br><br>
 
-Da unser Verein nun neue Mitgliedsnummern eingeführt hat, wollte unser Vorstand, dass diese auch in der Platzbuchungssoftware nun für jeden einzelnen eingetragen werden. Hierfür soll die sogenannte <b>UID</b> (User ID) als Mitgliedsnummer dienen. Da allerdings die User ID's nicht ohne leichteres zu bearbeiten sind, muss dies händig in der Datenbank angepasst werden. Da mich die phpmyadmin Oberfläche da nicht wirklich weiterhelfen konnte, habe ich hier mal ein schnelles Workaround geschaffen.
+Da unser Verein nun neue Mitgliedsnummern eingeführt hat, wollte unser Vorstand, dass diese auch in der Platzbuchungssoftware nun für jeden einzelnen eingetragen werden. Hierfür soll die sogenannte <b>UID</b> (User ID) als Mitgliedsnummer dienen. Da allerdings die User ID's nicht ohne leichteres zu bearbeiten sind, muss dies händig in der Datenbank angepasst werden. Allerdings sind Schlüsselanpassungen immer etwas kritisch und man muss hier eine Reihenfolge einhalten. Da mir die phpmyadmin Oberfläche da nicht wirklich weiterhelfen konnte, habe ich hier mal einen schnellen Workaround geschaffen.
 
 <b>Momentan werden hier nur die Tabellen <b>bs_bookings, bs_users, bs_users_meta</b> berücksichtigt, sonst keine!!!<br>
 Ich empfehle IMMER ein Backup der Datenbank zu erstellen, bevor manuell an der Datenbank geschraubt wird!!!<br>
