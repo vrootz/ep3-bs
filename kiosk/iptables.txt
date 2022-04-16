@@ -1,0 +1,38 @@
+### INSTALL IPTABLES-PERSISTENT ###
+apt update && apt install -y iptables-persistent
+!
+### ALLOW BASIC NECESSARY ###
+iptables -I INPUT 1 -i lo -j ACCEPT
+iptables -A OUTPUT -p icmp -j ACCEPT
+iptables -A INPUT -p icmp -j ACCEPT
+!
+### ALLOW NECESSARY OUT ###
+iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+iptables -A OUTPUT -p udp --dport 67:68 -j ACCEPT
+iptables -A OUTPUT -p udp --dport 123 -j ACCEPT
+iptables -A OUTPUT -p udp --sport 53 -j ACCEPT
+iptables -A OUTPUT -p udp --sport 67:68 -j ACCEPT
+iptables -A OUTPUT -p udp --sport 123 -j ACCEPT
+!
+### WILL ALLOW INPUT VIA CONNTRACK RULE
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+!
+### ALLOW SSH FROM HOME ###
+iptables -A INPUT -p tcp -s 213.188.121.69/32 --dport 22 -j ACCEPT
+!
+### ALLOW SURFING ONLY SPECIFIC DOMAIN ###
+iptables -A OUTPUT -m multiport -p tcp -d tennis-gsv.de --dport 80,443 -j ACCEPT
+!
+### DROP RULES v4 ###
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+!
+### DROP RULES v6 ###
+ip6tables -P INPUT DROP
+ip6tables -P OUTPUT DROP
+ip6tables -P FORWARD DROP
+!
+### IPTABLES PERSISTENT ###
+iptables-save > /etc/iptables/rules.v4
+ip6tables-save > /etc/iptables/rules.v6
+!
