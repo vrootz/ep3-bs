@@ -40,3 +40,34 @@ Nun muss man nur noch einen Cronjob einrichten, der nach dem Reboot die <b>kiosk
 unter Ubuntu kann man einfach nach der Standardanwendung <b>Startup Application</b> suchen und dort den vollständigen Pfad zum Bash-Skript eingeben z.B. <code>sleep 60;/var/kiosk/kiosk.sh</code>
 
 Das ist so ziemlich alles.
+
+# uid
+Since our association has now introduced new membership numbers, our board wanted these to be entered in the seat booking software for each individual. For this purpose, the so-called <b>UID</b> (User ID) should serve as a membership number. However, since the user IDs cannot be edited easily, this must be adjusted manually in the database. Since the phpmyadmin interface couldn't really help me, I created a quick workaround here.
+
+<b>Currently only the tables <b>bs_bookings, bs_users, bs_users_meta</b> are considered here, nothing else!!!<br>
+I ALWAYS recommend creating a backup of the database before manually screwing on the database!!!<br>
+Use the script at your own risk!!!</b>
+
+<ul>
+  <li><b>searchform.html</b>: The HTML file only contains an input field with which you can read out the information for which the UID is used. Simply enter the current UID and press the Submit button.</li><br>
+  <li><b>search.php</b>: The connection data of the database used must be entered in the search.php file before use in order to be able to read and replace the files. If the UID is available, all data records from the tables <b>bs_bookings, bs_users, bs_users_meta</b> will be output.<br>Now you have the option of replacing the current UID with a new UID. Simply enter the new UID in the input field and press Submit.</li><br>
+  <li><b>replace.php</b>: The individual steps, including the old extract of the data, the replace query and the extract of the new data, are then listed in the replace.php. If an excerpt is empty then there are no records.</li><br>
+  <li>I do not recommend placing the three files in the <b>/</b> (root) directory but in an area that is protected, for example, by a .htaccess file and protected by a login or only from certain IP addresses can be reached from.</li>
+</ul><br>
+
+#############################<br>
+GERMAN<br>
+#############################<br><br>
+
+Da unser Verein nun neue Mitgliedsnummern eingeführt hat, wollte unser Vorstand, dass diese auch in der Platzbuchungssoftware nun für jeden einzelnen eingetragen werden. Hierfür soll die sogenannte <b>UID</b> (User ID) als Mitgliedsnummer dienen. Da allerdings die User ID's nicht ohne leichteres zu bearbeiten sind, muss dies händig in der Datenbank angepasst werden. Da mich die phpmyadmin Oberfläche da nicht wirklich weiterhelfen konnte, habe ich hier mal ein schnelles Workaround geschaffen.
+
+<b>Momentan werden hier nur die Tabellen <b>bs_bookings, bs_users, bs_users_meta</b> berücksichtigt, sonst keine!!!<br>
+Ich empfehle IMMER ein Backup der Datenbank zu erstellen, bevor manuell an der Datenbank geschraubt wird!!!<br>
+Nutzung des Scripts auf eigene Gefahrt!!!</b>
+
+<ul>
+  <li><b>searchform.html</b>: Die HTML-Datei enthält lediglich ein Eingabefeld mit der man die Informationen auslesen kann, bei denen die UID verwendet wird.  Einfach momentane UID eingeben und den Submit Knopf betätigen.</li><br>
+  <li><b>search.php</b>: In der search.php Datei muss vor Benutzung die Verbindungsdaten der verwendeten Datenbank eingegeben werden um die Dateien auslesen und ersetzen zu können. Falls die UID vorhanden ist, werden alle Datensätze aus den Tabellen <b>bs_bookings, bs_users, bs_users_meta</b> ausgegeben.<br>Nun hat man die Möglichkeit die momentane UID mit einer neuen UID zu ersetzen. Dafür einfach in das Eingabefeld die neue UID eintippen und auf Submit drücken.</li><br>
+  <li><b>replace.php</b>: In der replace.php werden dann die einzelnen Schritte samt den alten Auszug der Daten, dem Replace Query und den Auszug der neuen Daten. Falls ein Auszug ohne Inhalt ist dann sind keine Datensätze vorhanden.</li><br>
+  <li>Ich empfehle die drei Dateien nicht in das <b>/</b> (root-) Verzeichnis zu legen sondern in einen Bereich der bspw. durch eine .htaccess Datei geschützt ist und durch einen Login oder nur von gewissen IP-Adressen aus erreichbar ist.</li>
+</ul><br>
