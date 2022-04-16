@@ -63,7 +63,7 @@ Da unser Verein nun neue Mitgliedsnummern eingeführt hat, wollte unser Vorstand
 
 <b>Momentan werden hier nur die Tabellen <b>bs_bookings, bs_users, bs_users_meta</b> berücksichtigt, sonst keine!!!<br>
 Ich empfehle IMMER ein Backup der Datenbank zu erstellen, bevor manuell an der Datenbank geschraubt wird!!!<br>
-Nutzung des Scripts auf eigene Gefahrt!!!</b>
+Nutzung des Scripts auf eigene Gefahr!!!</b>
 
 <ul>
   <li><b>searchform.html</b>: Die HTML-Datei enthält lediglich ein Eingabefeld mit der man die Informationen auslesen kann, bei denen die UID verwendet wird.  Einfach momentane UID eingeben und den Submit Knopf betätigen.</li><br>
